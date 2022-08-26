@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: orderservice
+  profiles:
+    active: dev # 环境
+  cloud:
+    inetutils:
+      preferred-networks: 192.168.1
+    nacos:
+      server-addr: 192.168.1.8:8888
+
+      discovery:
+        cluster-name: HZ # 集群名称。这里HZ代指杭州,SH代指上海
+        #        ephemeral: false
+      config:
+        #        username: nacos
+        #        password: nacos
+        # 这里的spring.application.name与spring.profiles.active与yaml组成了nacos中配置文件的文件名
+        file-extension: yaml
+        #namespace: e98e3663-ee4f-422d-b0f9-a2182f9958d6
+
+
+
+
+
